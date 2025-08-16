@@ -1,6 +1,5 @@
 # Setup
-title:               Gal Sapir
-# tagline:             'A Jekyll theme'
+title:               Sparse Thoughts
 description:         'Sparse thoughts on things I found online'
 url:                 "https://galsapir.github.io"
 baseurl:             '/sparse-thoughts/'
