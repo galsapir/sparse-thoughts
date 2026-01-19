@@ -113,6 +113,18 @@ h1, h2, h3, h4, h5, h6 {
   color: #c0c0c0;
   letter-spacing: 0;
 }
+.masthead-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.masthead-social {
+  color: #9a9a9a;
+}
+.masthead-social:hover {
+  color: #505050;
+  text-decoration: none;
+}
 
 @media (max-width: 48em) {
   .masthead-title {
