@@ -326,6 +326,21 @@ a.sidebar-nav-item:focus {
   color: #9a9a9a;
 }
 
+/* Subscribe section */
+.subscribe-section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid #eee;
+  margin-top: 2rem;
+}
+.subscribe-section h3 {
+  margin-top: 0;
+}
+.subscribe-section p {
+  color: #9a9a9a;
+  font-size: 0.875rem;
+}
+
 /* Related posts */
 .related {
   padding-top: 2rem;
