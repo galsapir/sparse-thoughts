@@ -1,0 +1,36 @@
+---
+layout: post
+title: how will we know the model did a good job?
+---
+
+A foundation model I've been working on recently got published in Nature.[^1] For a while I've wanted to write this. Now the paper is finally out so I have to do it in a timely manner, and I also have to start investing more thought in the upcoming projects (some are similar). So what is this? I think the honest answer is something between a post-mortem of a successful project and some exploration towards the future. Exploration about the question that lived in my mind when I was working on this project: "how do we know it's actually worthwhile?" I think it comes up often in these kinds of research works.
+
+Before we had results, before we had figures, before we wrote the first lines of code, actually — we had that question and couldn't stop asking it. We were building a foundation model for continuous glucose monitoring data, training a transformer to learn representations of metabolic health, and the problem was: *if it worked, what would "worked" even mean? What would this thing be able to do that would prove it has value?*
+
+So one of the first things we wrote wasn't code. It was a document titled "Evaluation Metrics for CGM Foundation Model." The subtitle was the question itself: *How will we know the model did a good job?* It was an internal document, used for discussion, exploring our options, thinking through things in writing together. The aim was to prevent later cherry-picking, to separate hypothesis generation from hypothesis testing.[^3] We listed every physiological system that CGM might plausibly encode: microvascular complications, macrovascular complications, liver function, lipids, sleep, body composition. We mapped out which external cohorts we could test on, which clinical trials had CGM data, what predictions would actually be meaningful versus what would just be impressive-looking.
+
+We were inventing our criteria for success as part of starting the work. I don't think this specific kind of intellectual labor has a name, but it turned out to be where we invested the most time — and where I felt my contribution to be most significant.[^4]
+
+Then Guy (the lead author) finished training the model, and we looked at the latent space as represented by UMAP. There, we saw axes that looked like physiology. You could see postprandial glucose response organizing along one dimension, fasting glucose along another. It looked like the model had learned something real about metabolic health. But UMAPs are notorious for showing you what you want to see.[^5] The pattern was suggestive, not conclusive. So we went back to the evaluation document we'd created and started working through it, testing the model on real cohorts we didn't train on.
+
+The moment things shifted — not to certainty, but to less doubt — was the [AEGIS cohort](https://pubmed.ncbi.nlm.nih.gov/28317402/).[^6] A Spanish study with long-term follow-up. We could ask: does the model's representation of someone's CGM predict their cardiovascular risk years later? It did. The risk stratification worked. People in the top quartile of model-predicted risk had dramatically higher rates of cardiovascular mortality. This wasn't a standard CGM metric like time-in-range or glucose variability — it was something the model extracted that we couldn't fully interpret.[^2] We ran more external cohorts after that, and each one reduced uncertainty a little more.
+
+The paper is now published in Nature. By every external metric, this is a success. And I'm still not sure what hard biological problem it definitively solves.
+
+I'm not trying to be modest here, it's just the honest epistemic state. We proved the model learns something. We proved it generalizes. We proved its representations predict outcomes better than standard metrics. What we didn't prove — what I'm not sure anyone has proved for foundation models in biology — is that this approach is worth it compared to simpler methods. There's [this post](https://x.com/SynBio1/status/2014362787447701752) I saw out of context and now it feels relevant: "It is now easier to build an AI tool for biology than to use that tool against a hard biological problem." We built a tool, and the hard problem remains.
+
+So what would "worth it" actually look like? I've been thinking about this for the next foundation model we're building, which is multimodal — across lab values, imaging, longitudinal trajectories. One approach we're exploring is perturbation: taking an individual and asking what the model predicts would happen to their biomarkers if we artificially modified one parameter. What if we simulate weight loss? What if we reduce their LDL by some percentage? The model was never explicitly taught dose-response relationships. It just saw real trajectories. So any systematic relationship between intervention magnitude and outcome magnitude would have to be something it learned from the data itself. If it learned actual physiology, it should get the directions right, maybe even the relative magnitudes. That's an open question, not a solved one. But this feels closer to what "works" might actually mean: not just prediction, but demonstrating the model learned something about how the system operates — enough to answer counterfactual questions.
+
+The question that started the GluFormer project — *how will we know the model did a good job?* — hasn't been answered. It's evolved. And if there's something I'm taking with me, it's this: "how do you prove this is good?" is a question you carry. For this model, the next one, the field. I don't have a cleaner way to put it.
+
+[^1]: [A foundation model for continuous glucose monitoring data](https://nature.com/articles/s41586-025-09925-9). For full text: [rdcu.be/eY5fH](http://rdcu.be/eY5fH)
+
+[^2]: Specifically, we processed raw CGM data from 580 participants (followed for a median of 11 years) through GluFormer to generate high-dimensional embeddings, then mapped these to a single "GluFormer-derived score" originally trained to predict HbA1c.
+
+[^3]: We discussed actual pre-registration early on. Decided against it — foundation model research might be inherently too exploratory. You're building a thing and then figuring out what it's good for. Hard to pre-register that.
+
+[^4]: There's a version of scientific writing where you discover truth and then report it. And another where you choose which questions matter, which framing makes the work legible. We did the second. That's not dishonesty — it's deciding what counts as interesting.
+
+[^5]: UMAPs have well-documented problems — they can show structure that isn't there, they're sensitive to hyperparameters, the axes aren't necessarily meaningful. Ours ended up in supplementary materials, not main figures. The suggestive pattern was a starting point, not evidence.
+
+[^6]: People sometimes ask about the "eureka moment." There wasn't one. The generative capabilities felt promising. The cardiac risk stratification felt real. But no single breakthrough of certainty. That might just be what this kind of research feels like.
