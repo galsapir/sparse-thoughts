@@ -1,3 +1,7 @@
+---
+layout: post
+title: the entertainment is instagram reels (and tiktoks)
+---
 > "The Entertainment is real, and it's called Instagram Reels."
 
 — Will Gottsegen, [The Atlantic](https://www.theatlantic.com/newsletters/2026/01/infinite-jest-hyperion-sans-soleil-culture-recs/685650/)
