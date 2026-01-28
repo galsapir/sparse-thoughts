@@ -1,6 +1,7 @@
 ---
 layout: post
 title: how will we know the model did a good job?
+description: "Why we wrote evaluation criteria before code—lessons from publishing a CGM foundation model in Nature."
 ---
 
 A foundation model I've been working on recently got published in Nature.[^1] For a while I've wanted to write this. Now the paper is finally out so I have to do it in a timely manner, and I also have to start investing more thought in the upcoming projects (some are similar). So what is this? I think the honest answer is something between a post-mortem of a successful project and some exploration towards the future. Exploration about the question that lived in my mind when I was working on this project: "how do we know it's actually worthwhile?" I think it comes up often in these kinds of research works.
