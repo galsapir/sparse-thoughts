@@ -1,6 +1,7 @@
 ---
 layout: post
 title: What's Sparse Thoughts?
+description: "Introduction to Sparse Thoughts—a low-friction space for collecting and reflecting on interesting content."
 ---
 
 For a while now I've been collecting too many things to read and think about, mostly in twitter 'saved links'. 

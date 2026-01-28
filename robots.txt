@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://galsapir.github.io/sparse-thoughts/sitemap.xml
