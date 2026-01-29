@@ -18,6 +18,10 @@ social:
   name:              Gal Sapir
   links:
     - https://bsky.app/profile/sapir.bsky.social
+    - https://x.com/galsapir_
+
+twitter:
+  username:          galsapir_
 
 # Gems
 plugins:
