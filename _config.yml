@@ -1,20 +1,29 @@
 # Setup
 title:               Sparse Thoughts
-description:         'Sparse thoughts on things I found online'
+name:                Sparse Thoughts
+description:         "Research notes on foundation models, evaluation, and ML in biology"
 url:                 "https://galsapir.github.io"
-baseurl:             '/sparse-thoughts/'
+baseurl:             "/sparse-thoughts"
 paginate:            5
 permalink:           pretty
 
 # About/contact
 author:
   name:              Gal Sapir
-  url:               https://galsapir.github.io
-  email:             galsapi@gmail.com
+  url:               https://galsapir.github.io/sparse-thoughts
+  email:             hello.sparse.thoughts@gmail.com
+
+# Social (for jekyll-seo-tag)
+social:
+  name:              Gal Sapir
+  links:
+    - https://bsky.app/profile/sapir.bsky.social
 
 # Gems
 plugins:
   - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Custom vars
 version:             1.1.0

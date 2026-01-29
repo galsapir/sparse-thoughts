@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+description: "About Gal Sapir—healthcare researcher writing about foundation models, evaluation, and ML in biology."
 ---
 
 i'm a researcher (working in healthcare). I try to consume content — books, papers, posts, podcasts, whatever — and started writing to figure out what I actually think about it all.
