@@ -8,11 +8,12 @@ paginate:            5
 permalink:           pretty
 
 # About/contact
-author:              Gal Sapir
+author:
+  name:              Gal Sapir
+  url:               https://galsapir.github.io/sparse-thoughts
+  email:             hello.sparse.thoughts@gmail.com
 
 # Social (for jekyll-seo-tag)
-twitter:
-  username:          sapir_bsky
 social:
   name:              Gal Sapir
   links:
