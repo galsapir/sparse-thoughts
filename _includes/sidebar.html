@@ -6,6 +6,7 @@
 <div class="sidebar" id="sidebar">
   <nav class="sidebar-nav">
     <a class="sidebar-nav-item{% if page.title == 'Home' %} active{% endif %}" href="{{ '/' | absolute_url }}">Home</a>
+    <a class="sidebar-nav-item{% if page.title == 'Thoughts' %} active{% endif %}" href="{{ '/thoughts/' | absolute_url }}">Thoughts</a>
 
     {% comment %}
       The code below dynamically generates a sidebar nav of pages with
@@ -14,7 +15,7 @@
 
     {% assign pages_list = site.pages | sort:"url" %}
     {% for node in pages_list %}
-      {% if node.title != null %}
+      {% if node.title != null and node.title != "Thoughts" %}
         {% if node.layout == "page" %}
           <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url | absolute_url }}">{{ node.title }}</a>
         {% endif %}

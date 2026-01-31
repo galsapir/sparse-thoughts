@@ -15,6 +15,34 @@
 
 
 /*
+ * CSS Custom Properties for theming
+ */
+
+:root {
+  --bg-color: #fff;
+  --text-color: #515151;
+  --heading-color: #313131;
+  --link-color: #268bd2;
+  --muted-color: #9a9a9a;
+  --border-color: #eee;
+  --code-bg: #f9f9f9;
+  --masthead-color: #505050;
+  --sidebar-bg: #202020;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #c9c9c9;
+  --heading-color: #e5e5e5;
+  --link-color: #6ab0de;
+  --muted-color: #888;
+  --border-color: #333;
+  --code-bg: #2d2d2d;
+  --masthead-color: #c9c9c9;
+  --sidebar-bg: #111;
+}
+
+/*
  * Contents
  *
  * Global resets
@@ -44,10 +72,16 @@ html {
   font-family: "PT Serif", Georgia, "Times New Roman", serif;
 }
 
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  color: #313131;
+  color: var(--heading-color);
   letter-spacing: -.025rem;
 }
 
@@ -97,15 +131,15 @@ h1, h2, h3, h4, h5, h6 {
   padding-top:    1rem;
   padding-bottom: 1rem;
   margin-bottom: 3rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--border-color);
 }
 .masthead-title {
   margin-top: 0;
   margin-bottom: 0;
-  color: #505050;
+  color: var(--masthead-color);
 }
 .masthead-title a {
-  color: #505050;
+  color: var(--masthead-color);
 }
 .masthead-title small {
   font-size: 75%;
@@ -119,11 +153,40 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 .masthead-social {
-  color: #9a9a9a;
+  color: var(--muted-color);
 }
 .masthead-social:hover {
-  color: #505050;
+  color: var(--masthead-color);
   text-decoration: none;
+}
+
+/* Theme toggle */
+.theme-toggle {
+  background: none;
+  border: 2px solid var(--muted-color);
+  border-radius: 20px;
+  width: 44px;
+  height: 24px;
+  cursor: pointer;
+  position: relative;
+  transition: border-color 0.2s ease;
+}
+.theme-toggle:hover {
+  border-color: var(--masthead-color);
+}
+.theme-toggle::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: var(--masthead-color);
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+[data-theme="dark"] .theme-toggle::after {
+  transform: translateX(20px);
 }
 
 @media (max-width: 48em) {
@@ -163,7 +226,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-size: .875rem; /* 15px */
   color: rgba(255,255,255,.6);
-  background-color: #202020;
+  background-color: var(--sidebar-bg);
   -webkit-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out;
 }
@@ -323,7 +386,7 @@ a.sidebar-nav-item:focus {
 .page-title,
 .post-title,
 .post-title a {
-  color: #303030;
+  color: var(--heading-color);
 }
 .page-title,
 .post-title {
@@ -335,21 +398,29 @@ a.sidebar-nav-item:focus {
   display: block;
   margin-top: -.5rem;
   margin-bottom: 1rem;
-  color: #9a9a9a;
+  color: var(--muted-color);
+}
+
+/* Continue reading link */
+.read-more {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
 }
 
 /* Subscribe section */
 .subscribe-section {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--border-color);
   margin-top: 2rem;
 }
 .subscribe-section h3 {
   margin-top: 0;
 }
 .subscribe-section p {
-  color: #9a9a9a;
+  color: var(--muted-color);
   font-size: 0.875rem;
 }
 
@@ -357,7 +428,7 @@ a.sidebar-nav-item:focus {
 .related {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--border-color);
 }
 .related-posts {
   padding-left: 0;
@@ -399,7 +470,7 @@ a.sidebar-nav-item:focus {
 .pagination-item {
   display: block;
   padding: 1rem;
-  border: 1px solid #eee;
+  border: 1px solid var(--border-color);
 }
 .pagination-item:first-child {
   margin-bottom: -1px;
@@ -407,7 +478,7 @@ a.sidebar-nav-item:focus {
 
 /* Only provide a hover state for linked pagination items */
 a.pagination-item:hover {
-  background-color: #f5f5f5;
+  background-color: var(--code-bg);
 }
 
 @media (min-width: 30em) {
@@ -582,4 +653,53 @@ a.pagination-item:hover {
 /* Only one tweak for a reverse layout */
 .layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
   box-shadow: -.25rem 0 .5rem rgba(0,0,0,.1);
+}
+
+
+/*
+ * Dark mode overrides for poole.css elements
+ */
+
+a {
+  color: var(--link-color);
+}
+
+strong {
+  color: var(--heading-color);
+}
+
+hr {
+  border-top-color: var(--border-color);
+}
+
+code,
+pre {
+  background-color: var(--code-bg);
+}
+
+pre code {
+  background-color: transparent;
+}
+
+blockquote {
+  color: var(--muted-color);
+  border-left-color: var(--border-color);
+}
+
+table {
+  border-color: var(--border-color);
+}
+
+td,
+th {
+  border-color: var(--border-color);
+}
+
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+  background-color: var(--code-bg);
+}
+
+.related-posts li small {
+  color: var(--muted-color);
 }

@@ -8,6 +8,8 @@ In the last couple of months we've been working on a health agent. It was my rol
 
 I'll try to describe here our attempt to answer this question. This follows Anthropic's [Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents), which I recommend reading first if you haven't.[^1] What I'm adding here is the specifics of applying these principles to health, what we actually learned when the rubber met the road, and where the general advice breaks down or needs adaptation.
 
+<!--more-->
+
 [^1]: Anthropic aren't the only ones writing about this - OpenAI recently posted about evaluating skills specifically, which is a nice complement: [Eval Skills](https://developers.openai.com/blog/eval-skills/). And [Hamel Husain's work](https://hamel.dev/) on evals is great.
 
 ## Starting with tasks

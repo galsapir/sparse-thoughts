@@ -10,6 +10,8 @@ LLMs have shifted where value comes from. It's no longer enough to simply have p
 
 Before we continue I want to think about a simple metaphor here — LLMs can *ingest* the data. They'll happily consume every row and column you throw at them. But (and this is important) without the right transformation, they can't *metabolize* it. The nutritional value passes through unabsorbed. They're missing the "enzymes" I guess you can call it. Data activation is about providing those enzymes: converting raw information into a form the model can actually digest and turn into a **capability**.
 
+<!--more-->
+
 ## Why this matters now (healthcare as case study)
 
 Looking specifically at healthcare data, the opportunity is immense — and let's face it, time limited. Looking at OpenAI's [report](https://cdn.openai.com/pdf/2cb29276-68cd-4ec6-a5f4-c01c5e7a36e9/OpenAI-AI-as-a-Healthcare-Ally-Jan-2026.pdf) from January 2026: more than 5% of all ChatGPT messages globally are healthcare-related. 25% of weekly active users ask health-related questions. More than 40 million people turn to ChatGPT **daily** for healthcare guidance (!!!).
