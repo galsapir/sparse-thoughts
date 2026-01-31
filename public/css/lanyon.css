@@ -137,6 +137,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0;
   color: var(--masthead-color);
+  flex: 1;
+  text-align: center;
 }
 .masthead-title a {
   color: var(--masthead-color);
@@ -151,6 +153,9 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.masthead-spacer {
+  width: 44px; /* matches theme-toggle width */
 }
 .masthead-social {
   color: var(--muted-color);
@@ -190,11 +195,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 48em) {
-  .masthead-container {
-    padding-left: 3.5rem;
-  }
-  .masthead-title {
-    text-align: center;
+  .masthead-spacer {
+    width: 3rem; /* space for hamburger menu */
   }
   .masthead-title small {
     display: none;
