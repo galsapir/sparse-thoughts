@@ -190,6 +190,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 48em) {
+  .masthead-container {
+    padding-left: 3.5rem;
+  }
   .masthead-title {
     text-align: center;
   }
