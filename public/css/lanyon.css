@@ -438,3 +438,30 @@ tbody tr:nth-child(odd) th {
 .related-posts li small {
   color: var(--muted-color);
 }
+
+/*
+ * Lists
+ */
+
+ul {
+  padding-left: 2rem;
+}
+
+ol {
+  list-style: none;
+  padding-left: 2.5rem;
+  counter-reset: ol-counter;
+}
+
+ol > li {
+  counter-increment: ol-counter;
+  position: relative;
+}
+
+ol > li::before {
+  content: counter(ol-counter) ".";
+  position: absolute;
+  left: -2rem;
+  width: 1.75rem;
+  color: var(--muted-color);
+}
