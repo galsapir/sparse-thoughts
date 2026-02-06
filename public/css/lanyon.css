@@ -412,6 +412,10 @@ pre {
   background-color: var(--code-bg);
 }
 
+code {
+  color: var(--text-color);
+}
+
 pre code {
   background-color: transparent;
 }
