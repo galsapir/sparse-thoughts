@@ -3,6 +3,7 @@ layout: post
 title: "a second opinion"
 date: 2026-02-11
 description: "Building a Claude Code skill that gets a second opinion from a different model family — and what the first real test revealed about what AI review can and can't catch."
+audio: "assets/audio/a-second-opinion.mp3"
 ---
 
 I've been noticing something about how I work with Claude. It's not dramatic — no moment where the model led me off a cliff and I realized too late. It's more of a drift. The models have gotten good enough that my default reaction to most outputs is "yeah, that's probably right." And most of the time it is. But "most of the time" is doing a lot of work in that sentence.
