@@ -2,6 +2,7 @@
 layout: post
 title: data activation thoughts
 description: "How to transform structured medical data into reasoning traces that improve LLM clinical performance—patient similarity and contrastive approaches."
+audio: "assets/audio/data_activation.mp3"
 ---
 
 The landscape is shifting in recent years — it's a cliche to start texts like this these days, but the fact that it's a cliche doesn't make it any less true.[^1] In 2019, the folks at Andreessen Horowitz wrote this about data (in a piece titled [The Empty Promise of Data Moats](https://a16z.com/the-empty-promise-of-data-moats/)): "Instead of getting stronger, the defensible moat erodes as the data corpus grows and the competition races to catch up." (Trying to prove some data has value — I've experienced it firsthand.)

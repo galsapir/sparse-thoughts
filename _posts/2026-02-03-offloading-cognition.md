@@ -2,6 +2,7 @@
 layout: post
 title: cognitive offloading, exoskeletons, and remaining sentient
 description: "How to use AI coding tools without losing the skills and satisfaction that make programming worthwhile."
+audio: "assets/audio/offloading-cognition.mp3"
 ---
 
 How can someone who enjoys thinking — enjoys the cognitive load — use coding agents and LLMs to foster continued learning, and not skill degradation? And what are some useful mental frameworks to have in mind?

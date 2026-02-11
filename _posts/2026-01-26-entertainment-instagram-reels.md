@@ -2,6 +2,7 @@
 layout: post
 title: the entertainment is instagram reels (and tiktoks)
 description: "A brief note on how Infinite Jest's 'Entertainment' prediction has arrived in the form of Instagram Reels."
+audio: "assets/audio/entertainment-instagram-reels.mp3"
 ---
 > "The Entertainment is real, and it's called Instagram Reels."
 

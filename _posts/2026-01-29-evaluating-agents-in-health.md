@@ -2,6 +2,7 @@
 layout: post
 title: how we actually evaluate agents (health)
 description: "Applying Anthropic's agent evals framework to health—what worked, what broke, and where general advice needs adaptation."
+audio: "assets/audio/evaluating-agents-in-health.mp3"
 ---
 
 In the last couple of months we've been working on a health agent. It was my role specifically to deal with the messy answer to the tough question: "is it good? worthwhile? valuable?"
