@@ -202,12 +202,22 @@ def main() -> None:
     frontmatter, body = parse_frontmatter(text)
     narration_text = strip_markdown(body)
 
+    word_count = len(narration_text.split())
+
     if args.dry_run:
         print(narration_text)
         print(f"\n--- Stats ---")
         print(f"Characters: {len(narration_text)}")
-        print(f"Words: {len(narration_text.split())}")
+        print(f"Words: {word_count}")
         return
+
+    if word_count < 300:
+        print(
+            f"Post has only {word_count} words (minimum 300). "
+            f"Skipping narration.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
 
     # 2. Generate audio
     slug = slug_from_filename(args.post.name)
