@@ -11,7 +11,7 @@ I looked at excalidraw and tldraw first, explored a few implementations, and end
 
 The result is [drawio-claude](https://github.com/galsapir/drawio-claude). The workflow is simple: you point Claude Code at the repo, the skills built with the [skill creator](https://github.com/galsapir/claude-skills/) guidelines tell it how to generate `.drawio` files, and then you just ask for what you need in plain text. Describe a diagram, give it context, and it produces an editable file you can open directly in draw.io. Here's an example — an evaluation cycle figure I'm working on for a preprint:
 
-![Example diagram generated with drawio-claude](/assets/images/tdd-flywheel.drawio.svg)
+![Example diagram generated with drawio-claude]({{ site.baseurl }}/assets/images/tdd-flywheel.drawio.svg)
 
 A caveat: I built this mostly through detailed prompting and my [interview skill](https://github.com/galsapir/claude-skills/), not by deeply understanding how draw.io's XML works under the hood. I invested time in making sure the skill instructions were good and tested the outputs, but I didn't sit down and learn the format. For this kind of single-purpose tool, I think that's fine — the point is that it works and I can fix things in the editor when it doesn't.
 
