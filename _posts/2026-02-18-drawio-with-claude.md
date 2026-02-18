@@ -2,6 +2,7 @@
 layout: post
 title: "a small tool for diagrams"
 date: 2026-02-18
+description: "Building a small Claude Code skill for generating editable draw.io diagrams — and why investing in narrow, single-purpose tools is surprisingly high-leverage."
 ---
 
 I needed a way to make diagrams for posts and papers. The requirements were simple: something I could mostly just ask Claude to create, something that looked decent for scientific work, and something I could edit afterward — not a PNG I'd have to regenerate from scratch every time I wanted to move a box.
