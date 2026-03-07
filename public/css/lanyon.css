@@ -302,6 +302,15 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.1rem;
 }
 
+/* Post tags */
+.post-tags {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--muted-color);
+  margin-top: -0.75rem;
+  margin-bottom: 1rem;
+}
+
 /* Related posts */
 .related {
   padding-top: 1.5rem;
@@ -331,55 +340,74 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/*
- * Pagination
- *
- * Super lightweight (HTML-wise) blog pagination. `span`s are provide for when
- * there are no more previous or next posts to show.
- */
-
-.pagination {
-  overflow: hidden; /* clearfix */
-  margin-left: -1rem;
-  margin-right: -1rem;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  color: #ccc;
+/* Show more button */
+.post-hidden {
+  display: none;
+}
+.show-more-wrap {
   text-align: center;
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+}
+.show-more-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 0.9rem;
+  color: var(--muted-color);
+  padding: 0.5rem 0;
+  transition: color 0.15s ease;
+}
+.show-more-btn:hover {
+  color: var(--heading-color);
 }
 
-/* Pagination items can be `span`s or `a`s */
-.pagination-item {
-  display: block;
-  padding: 1rem;
-  border: 1px solid var(--border-color);
+/* Tag filters on thoughts page */
+.tag-filters {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0;
+  align-items: center;
 }
-.pagination-item:first-child {
-  margin-bottom: -1px;
+.tag-filter {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 0.85rem;
+  color: var(--muted-color);
+  padding: 0.15rem 0;
+  transition: color 0.15s ease;
+}
+.tag-filter::after {
+  content: "·";
+  margin: 0 0.4rem;
+  color: var(--muted-color);
+  pointer-events: none;
+}
+.tag-filter:last-child::after {
+  display: none;
+}
+.tag-filter:hover {
+  color: var(--heading-color);
+}
+.tag-filter.active {
+  color: var(--heading-color);
 }
 
-/* Only provide a hover state for linked pagination items */
-a.pagination-item:hover {
-  background-color: var(--code-bg);
+/* Thoughts page items */
+.thought-item {
+  transition: opacity 0.15s ease;
 }
-
-@media (min-width: 30em) {
-  .pagination {
-    margin: 3rem 0;
-  }
-  .pagination-item {
-    float: left;
-    width: 50%;
-  }
-  .pagination-item:first-child {
-    margin-bottom: 0;
-    border-top-left-radius:    4px;
-    border-bottom-left-radius: 4px;
-  }
-  .pagination-item:last-child {
-    margin-left: -1px;
-    border-top-right-radius:    4px;
-    border-bottom-right-radius: 4px;
-  }
+.thought-item.filtered-out {
+  display: none;
+}
+.thought-item .post-tags {
+  display: inline;
+  margin: 0;
+  margin-left: 0.35rem;
 }
 
 

@@ -3,6 +3,7 @@ layout: post
 title: narrating your blog with local AI
 description: "Open-source TTS crossed a quality threshold. Here's a tool that adds audio narration to Jekyll blogs using Kokoro-82M — runs locally on Apple Silicon, takes an evening to set up, costs nothing."
 audio: "assets/audio/narrating-your-blog.mp3"
+tags: [tools]
 ---
 
 A friend who drives a lot asked if there was an audio version of my posts. There wasn't. So I looked into it — and it turned out to be absurdly easy.<!--more-->

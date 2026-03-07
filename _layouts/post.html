@@ -5,6 +5,9 @@ layout: default
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date_to_string }}</span>
+  {% if page.tags.size > 0 %}
+  <span class="post-tags">{{ page.tags | join: ", " }}</span>
+  {% endif %}
   {% include audio-player.html %}
   {{ content }}
 </div>
@@ -14,11 +17,35 @@ layout: default
   <script async src="https://eocampaign1.com/form/35314382-f569-11f0-ba2a-cb5ad6d93887.js" data-form="35314382-f569-11f0-ba2a-cb5ad6d93887"></script>
 </div>
 
-{% if site.related_posts.size >= 1 %}
+{% comment %}Find posts sharing tags with the current post{% endcomment %}
+{% assign related = "" | split: "" %}
+{% for post in site.posts %}
+  {% if post.url != page.url %}
+    {% for tag in page.tags %}
+      {% if post.tags contains tag %}
+        {% unless related contains post %}
+          {% assign related = related | push: post %}
+        {% endunless %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+{% comment %}Fall back to recent posts if no tag overlap{% endcomment %}
+{% if related.size == 0 %}
+  {% for post in site.posts limit:3 %}
+    {% if post.url != page.url %}
+      {% assign related = related | push: post %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if related.size > 0 %}
 <div class="related">
-  <h3>Related</h3>
+  <h3>More posts</h3>
   <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
+    {% for post in related limit:3 %}
       <li>
         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
         <small>{{ post.date | date_to_string }}</small>

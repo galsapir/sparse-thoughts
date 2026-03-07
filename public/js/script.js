@@ -28,4 +28,38 @@
       }
     });
   }
+
+  // "Show more" on homepage
+  var showMoreBtn = document.getElementById('show-more-btn');
+  if (showMoreBtn) {
+    showMoreBtn.addEventListener('click', function() {
+      var hidden = document.querySelectorAll('.post-hidden');
+      for (var i = 0; i < hidden.length; i++) {
+        hidden[i].classList.remove('post-hidden');
+      }
+      showMoreBtn.parentElement.remove();
+    });
+  }
+
+  // Tag filtering on thoughts page
+  var tagFilters = document.querySelectorAll('.tag-filter');
+  if (tagFilters.length > 0) {
+    var items = document.querySelectorAll('.thought-item');
+    tagFilters.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var tag = btn.getAttribute('data-tag');
+
+        tagFilters.forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+
+        items.forEach(function(item) {
+          if (tag === 'all' || item.getAttribute('data-tags').split(' ').indexOf(tag) !== -1) {
+            item.classList.remove('filtered-out');
+          } else {
+            item.classList.add('filtered-out');
+          }
+        });
+      });
+    });
+  }
 })(document);
