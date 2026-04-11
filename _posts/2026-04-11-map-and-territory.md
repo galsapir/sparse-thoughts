@@ -64,7 +64,7 @@ Borges' cartographers fell in love with map-making and forgot what it was for. t
 
 [^7]: see [anthropic's economic index report](https://www.anthropic.com/research/anthropic-economic-index-january-2026-report) (january 2026) on how model output sophistication correlates with the educational background of the person prompting.
 
-[^8]: henry farrell, "the map is eating the territory" (2024). his treatment of the political economy of AI-as-summarization is thorough and worth reading in full. i'm deliberately not covering that ground here.
+[^8]: henry farrell, ["the map is eating the territory"](https://www.programmablemutter.com/p/the-political-economy-of-ai) (2024). his treatment of the political economy of AI-as-summarization is thorough and worth reading in full. i'm deliberately not covering that ground here.
 
 [^9]: michel houellebecq, *the map and the territory* (2010). his protagonist achieves fame by photographing road maps, arguing they are more beautiful than the landscapes they represent. to be clear: studying models on their own terms is important and legitimate work. i'm observing the shift, not criticizing it.
 
