@@ -68,7 +68,7 @@ Borges' cartographers fell in love with map-making and forgot what it was for. t
 
 [^9]: michel houellebecq, *the map and the territory* (2010). his protagonist achieves fame by photographing road maps, arguing they are more beautiful than the landscapes they represent. to be clear: studying models on their own terms is important and legitimate work. i'm observing the shift, not criticizing it.
 
-[^10]: michael polanyi, *the tacit dimension* (1966). LMs are, funnily enough, also a bit like this: they contain more than they can easily surface, and you have to prompt them in certain ways to make them reveal what they have. a kind of loosely encrypted zip file of human knowledge.
+[^10]: michael polanyi, [*the tacit dimension*](https://tacit-knowledge-architecture.com/object/the-tacit-dimension-excerpt/) (1966). LMs are, funnily enough, also a bit like this: they contain more than they can easily surface, and you have to prompt them in certain ways to make them reveal what they have. a kind of loosely encrypted zip file of human knowledge.
 
 [^11]: as an example: a colleague ran a hypothesis-generation agent on a prompt about liver ultrasound correlations in large populations. it retrieved 18 papers, applied five "research facets," and produced five hypotheses with titles, research questions, and experiment plans. the structure was impeccable. but the first hypothesis simply restated the input prompt. the third grabbed a zero-citation paper about skeletal muscle oxygenation and proposed "do this but for liver" with no consideration of whether that makes anatomical sense. the map of how science works was used to produce the appearance of science working.
 
