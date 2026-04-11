@@ -50,7 +50,7 @@ Borges' cartographers fell in love with map-making and forgot what it was for. t
 
 ---
 
-[^1]: jorge luis borges, "on exactitude in science" (1946). the full story is one paragraph long: https://kwarc.info/teaching/TDM/Borges.pdf
+[^1]: jorge luis borges, "on exactitude in science" (1946). the full story is [one paragraph long](https://kwarc.info/teaching/TDM/Borges.pdf)
 
 [^2]: i use "LMs" loosely here to mean the whole stack: language models, the systems built around them, the agents, the tools. the map is the whole thing, not just the weights.
 
@@ -62,7 +62,7 @@ Borges' cartographers fell in love with map-making and forgot what it was for. t
 
 [^6]: this echoes Baudrillard's argument about the byzantine iconoclasts, who feared that creating images of god would reveal there was nothing behind the images. when the representation becomes authoritative enough, the distinction between "represents knowledge" and "is knowledge" quietly collapses.
 
-[^7]: see anthropic's economic index report (january 2026) on how model output sophistication correlates with the educational background of the person prompting: https://www.anthropic.com/research/anthropic-economic-index-january-2026-report
+[^7]: see [anthropic's economic index report](https://www.anthropic.com/research/anthropic-economic-index-january-2026-report) (january 2026) on how model output sophistication correlates with the educational background of the person prompting.
 
 [^8]: henry farrell, "the map is eating the territory" (2024). his treatment of the political economy of AI-as-summarization is thorough and worth reading in full. i'm deliberately not covering that ground here.
 
@@ -72,4 +72,4 @@ Borges' cartographers fell in love with map-making and forgot what it was for. t
 
 [^11]: as an example: a colleague ran a hypothesis-generation agent on a prompt about liver ultrasound correlations in large populations. it retrieved 18 papers, applied five "research facets," and produced five hypotheses with titles, research questions, and experiment plans. the structure was impeccable. but the first hypothesis simply restated the input prompt. the third grabbed a zero-citation paper about skeletal muscle oxygenation and proposed "do this but for liver" with no consideration of whether that makes anatomical sense. the map of how science works was used to produce the appearance of science working.
 
-[^12]: i've written more about the related problem of cognitive offloading and maintaining engagement with these tools in "cognitive offloading, exoskeletons, and remaining sentient" (https://galsapir.github.io/sparse-thoughts/2026/02/03/offloading-cognition/).
+[^12]: i've written more about the related problem of cognitive offloading and maintaining engagement with these tools in ["cognitive offloading, exoskeletons, and remaining sentient"](https://galsapir.github.io/sparse-thoughts/2026/02/03/offloading-cognition/).
