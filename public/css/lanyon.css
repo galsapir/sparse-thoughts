@@ -233,7 +233,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* On single post pages: remove spacing/border since subscribe section follows */
-.post:only-of-type {
+.post:has(+ .subscribe-section) {
   margin-bottom: 0;
   padding-bottom: 0;
   border-bottom: none;
@@ -292,14 +292,43 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Subscribe section */
 .subscribe-section {
-  padding-top: 1.5rem;
+  padding-top: 1rem;
   padding-bottom: 0.5rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  text-align: center;
 }
 .subscribe-section h3 {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   font-size: 1.1rem;
+}
+.buttondown-form {
+  display: inline-flex;
+  gap: 0.5rem;
+  max-width: 400px;
+}
+.buttondown-form input[type="email"] {
+  flex: 1;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 0.85rem;
+}
+.buttondown-form input[type="submit"] {
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.buttondown-form input[type="submit"]:hover {
+  border-color: var(--text-color);
 }
 
 /* Post tags */
