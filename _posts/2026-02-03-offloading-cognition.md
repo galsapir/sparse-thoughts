@@ -66,12 +66,12 @@ I'm not sure there's a clean answer here. Maybe the honest thing is to sit with 
 [^2]: This isn't meant to be a comprehensive summary of the research — the paper itself is worth reading in full. I'm focusing on the aspects that stuck with me.
 [^3]: See for example the NYT piece on AI and social skills: [link](https://www.nytimes.com/2026/01/30/opinion/ai-social-skills-relationships.html).
 [^4]: [SolveIt](https://solve.it.com) — Jeremy Howard's course on AI-assisted learning that emphasizes understanding over output.
-[^5]: I wrote about this in [how we actually evaluate agents (health)](https://galsapir.github.io/sparse-thoughts/2026/01/29/evaluating-agents-in-health/).
+[^5]: I wrote about this in [how we actually evaluate agents (health)](https://sparsethought.com/2026/01/29/evaluating-agents-in-health/).
 [^6]: [GenAI as an Exoskeleton: Experimental Evidence on Knowledge Workers Using GenAI on New Skills](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4944588), Wiles et al.
 [^7]: [This Bluesky post](https://bsky.app/profile/catblanketflower.yuwakisa.com/post/3mdubzm2e4k2s).
 [^8]: This felt like a bit of a eureka moment when I first noticed it — the hollowness itself as information about whether I'm actually engaging with the work.
 [^9]: Jeremy Howard's SolveIt course emphasizes this distinction repeatedly — the difference between getting an answer and building understanding.
 [^10]: See the [UCalgary guide on close reading](https://ullyot.ucalgaryblogs.ca/teaching/close-reading/).
 [^11]: [Handy](https://handy.computer) is a tool I use for voice input — great for getting more context into prompts while keeping the thinking active.
-[^12]: I wrote about this previously: [the entertainment is instagram reels](https://galsapir.github.io/sparse-thoughts/2026/01/26/entertainment-instagram-reels/).
+[^12]: I wrote about this previously: [the entertainment is instagram reels](https://sparsethought.com/2026/01/26/entertainment-instagram-reels/).
 [^13]: I hope I'm wrong here, but I suspect not.

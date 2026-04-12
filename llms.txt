@@ -3,10 +3,10 @@
 > Research notes on foundation models, evaluation, and ML in biology by Gal Sapir.
 
 ## Posts
-- [how will we know the model did a good job?](https://galsapir.github.io/sparse-thoughts/2026/01/23/what-is-a-good-fm/): Why evaluation criteria should come before building foundation models—lessons from GluFormer
-- [data activation thoughts](https://galsapir.github.io/sparse-thoughts/2026/01/17/data_activation/): Notes on patient similarity approaches in clinical ML
-- [the entertainment is instagram reels](https://galsapir.github.io/sparse-thoughts/2026/01/26/entertainment-instagram-reels/): A brief note on how Infinite Jest's 'Entertainment' prediction has arrived
-- [What's Sparse Thoughts?](https://galsapir.github.io/sparse-thoughts/2025/08/16/whats-sparse-thoughts/): Introduction to this blog
+- [how will we know the model did a good job?](https://sparsethought.com/2026/01/23/what-is-a-good-fm/): Why evaluation criteria should come before building foundation models—lessons from GluFormer
+- [data activation thoughts](https://sparsethought.com/2026/01/17/data_activation/): Notes on patient similarity approaches in clinical ML
+- [the entertainment is instagram reels](https://sparsethought.com/2026/01/26/entertainment-instagram-reels/): A brief note on how Infinite Jest's 'Entertainment' prediction has arrived
+- [What's Sparse Thoughts?](https://sparsethought.com/2025/08/16/whats-sparse-thoughts/): Introduction to this blog
 
 ## About
-- [About](https://galsapir.github.io/sparse-thoughts/about/): About Gal Sapir
+- [About](https://sparsethought.com/about/): About Gal Sapir

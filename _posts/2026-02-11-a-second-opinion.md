@@ -47,8 +47,8 @@ After the 6/10 review I went back and made targeted improvements to the skill �
 
 ---
 
-[^1]: I wrote about cognitive offloading and the drift toward less engagement in [cognitive offloading, exoskeletons, and remaining sentient](https://galsapir.github.io/sparse-thoughts/2026/02/03/offloading-cognition/). The interview format I mentioned there — using AI as an interlocutor rather than a doer — is the same impulse, just applied differently. The `/interview` command is about staying engaged during the thinking phase; this one is about catching things during the review phase.
+[^1]: I wrote about cognitive offloading and the drift toward less engagement in [cognitive offloading, exoskeletons, and remaining sentient](https://sparsethought.com/2026/02/03/offloading-cognition/). The interview format I mentioned there — using AI as an interlocutor rather than a doer — is the same impulse, just applied differently. The `/interview` command is about staying engaged during the thinking phase; this one is about catching things during the review phase.
 
 [^2]: I didn't want to switch tools or start a separate workflow — I just wanted to be able to tap into a different model's perspective from within my existing setup.
 
-[^3]: The form vs. essence gap — being able to verify citations and tool calls but struggling to assess whether the output actually helps — is something I explored in [how we actually evaluate agents (health)](https://galsapir.github.io/sparse-thoughts/2026/01/29/evaluating-agents-in-health/).
+[^3]: The form vs. essence gap — being able to verify citations and tool calls but struggling to assess whether the output actually helps — is something I explored in [how we actually evaluate agents (health)](https://sparsethought.com/2026/01/29/evaluating-agents-in-health/).
