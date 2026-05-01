@@ -2,7 +2,7 @@
 layout: post
 title: "a week with a second brain"
 description: "notes from five days of running a memory MCP across Claude Code, desktop, mobile, and Codex: what's in there, what's already not working, and why the corpus is mostly corrections."
-tags: [tools]
+tags: [tools, memory, second-brain]
 audio: "assets/audio/second-brain-start.mp3"
 ---
 
