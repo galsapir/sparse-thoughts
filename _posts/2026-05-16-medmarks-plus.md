@@ -7,8 +7,6 @@ tags: [health, evaluation]
 audio: "assets/audio/medmarks-plus.mp3"
 ---
 
-# on raw-enough data
-
 [medmarks v1.0](https://arxiv.org/abs/2605.01417) dropped last week from the medARC group and got real attention, deservedly. it's the largest fully open medical LLM eval suite to date: 30 benchmarks across a verifiable subset (Medmarks-V) and an open-ended LLM-as-a-judge subset (Medmarks-OE), 61 models on 71 configurations. eight of the benchmarks (collectively Medmarks-T) ship with train/test splits as [verifiers](https://github.com/PrimeIntellect-ai/verifiers) environments, which means they're directly usable as RL substrate for post-training. the verifiers framing is the right abstraction at the right moment, and the breadth of model coverage is real work that someone needed to do. nothing that follows is meant as a dismissal.
 
 what it pulled out of me is a thread that started with the [Brodeur et al. science paper](https://sparsethought.com/2026/05/03/science-paper/) and hasn't resolved (the [eLetter](https://bsky.app/profile/sapir.bsky.social/post/3mlvtuxm6tk2a) did get published, which was nice).
