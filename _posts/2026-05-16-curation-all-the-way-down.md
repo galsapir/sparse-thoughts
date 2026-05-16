@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "on raw-enough data"
+title: "curation all the way down: on clinical AI benchmarks"
 description: "the curation regression, the openness trade-off, and what a substrate worth evaluating against would actually need: on Medmarks."
 date: 2026-05-16
 tags: [health, evaluation]
-audio: "assets/audio/medmarks-plus.mp3"
+audio: "assets/audio/curation-all-the-way-down.mp3"
 ---
 
 [medmarks v1.0](https://arxiv.org/abs/2605.01417) dropped last week from the medARC group and got real attention, deservedly. it's the largest fully open medical LLM eval suite to date: 30 benchmarks across a verifiable subset (Medmarks-V) and an open-ended LLM-as-a-judge subset (Medmarks-OE), 61 models on 71 configurations. eight of the benchmarks (collectively Medmarks-T) ship with train/test splits as [verifiers](https://github.com/PrimeIntellect-ai/verifiers) environments, which means they're directly usable as RL substrate for post-training. the verifiers framing is the right abstraction at the right moment, and the breadth of model coverage is real work that someone needed to do. nothing that follows is meant as a dismissal.
