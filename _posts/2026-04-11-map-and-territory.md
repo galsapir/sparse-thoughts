@@ -1,5 +1,6 @@
 ---
 layout: post
+redirect_from: /map-and-territory/
 title: "maps, territory and LMs"
 description: "Borges' cartographers, Baudrillard's stages of simulation, and Polanyi's tacit knowledge: on the skill of reading AI-generated maps without losing touch with the territory."
 tags: [culture]

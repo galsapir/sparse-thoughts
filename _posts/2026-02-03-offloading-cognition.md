@@ -1,5 +1,6 @@
 ---
 layout: post
+redirect_from: /offloading-cognition/
 title: cognitive offloading, exoskeletons, and remaining sentient
 description: "How to use AI coding tools without losing the skills and satisfaction that make programming worthwhile."
 audio: "assets/audio/offloading-cognition.mp3"

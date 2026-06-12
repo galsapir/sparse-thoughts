@@ -1,5 +1,6 @@
 ---
 layout: post
+redirect_from: /data_activation/
 title: data activation thoughts
 description: "How to transform structured medical data into reasoning traces that improve LLM clinical performance—patient similarity and contrastive approaches."
 audio: "assets/audio/data_activation.mp3"

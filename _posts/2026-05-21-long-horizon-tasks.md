@@ -1,5 +1,6 @@
 ---
 layout: post
+redirect_from: /long-horizon-tasks/
 title: "long-horizon tasks"
 description: "two modes of working with agents: synced mode does the expensive work of defining the chunk, delegate mode runs cheap on it, and the cost is (probably) the point."
 date: 2026-05-21

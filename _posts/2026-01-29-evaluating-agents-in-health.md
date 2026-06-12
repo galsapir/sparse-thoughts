@@ -1,5 +1,6 @@
 ---
 layout: post
+redirect_from: /evaluating-agents-in-health/
 title: how we actually evaluate agents (health)
 description: "Applying Anthropic's agent evals framework to health—what worked, what broke, and where general advice needs adaptation."
 audio: "assets/audio/evaluating-agents-in-health.mp3"

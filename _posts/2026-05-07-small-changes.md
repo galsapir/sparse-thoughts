@@ -1,5 +1,6 @@
 ---
 layout: post
+redirect_from: /small-changes/
 title: "small changes"
 description: "three small workflow shifts pointing in the same direction: portable context, cross-model delegation, and agent-first development."
 date: 2026-05-07

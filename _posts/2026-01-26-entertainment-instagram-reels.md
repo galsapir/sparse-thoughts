@@ -1,5 +1,6 @@
 ---
 layout: post
+redirect_from: /entertainment-instagram-reels/
 title: the entertainment is instagram reels (and tiktoks)
 description: "A brief note on how Infinite Jest's 'Entertainment' prediction has arrived in the form of Instagram Reels."
 tags: [culture]

@@ -1,5 +1,6 @@
 ---
 layout: post
+redirect_from: /drawio-with-claude/
 title: "a small tool for diagrams"
 date: 2026-02-18
 description: "Building a small Claude Code skill for generating editable draw.io diagrams — and why investing in narrow, single-purpose tools is surprisingly high-leverage."

@@ -1,5 +1,6 @@
 ---
 layout: post
+redirect_from: /a-second-opinion/
 title: "a second opinion"
 date: 2026-02-11
 description: "Building a Claude Code skill that gets a second opinion from a different model family — and what the first real test revealed about what AI review can and can't catch."

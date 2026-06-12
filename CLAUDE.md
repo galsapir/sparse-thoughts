@@ -33,7 +33,7 @@ Existing tags (grep `_posts/*.md` to confirm before relying on this list): `agen
 
 Before `git commit`:
 
-1. Front matter complete: layout, title (lowercase, quoted), description (quoted), date, tags as YAML list `[a, b]` (not string `a, b`), audio
+1. Front matter complete: layout, redirect_from (`/slug/`), title (lowercase, quoted), description (quoted), date, tags as YAML list `[a, b]` (not string `a, b`), audio
 2. Body starts with the first paragraph, not a `#` heading
 3. Footnotes use `[^N]` syntax (with caret), not plain `[N]`. Kramdown renders plain `[N]` as literal text, not clickable footnotes.
 4. No `{}` author notes remain in body — `grep '{' _posts/YYYY-MM-DD-slug.md`

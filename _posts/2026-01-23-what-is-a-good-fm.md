@@ -1,5 +1,6 @@
 ---
 layout: post
+redirect_from: /what-is-a-good-fm/
 title: how will we know the model did a good job?
 description: "Why we wrote evaluation criteria before code—lessons from publishing a CGM foundation model in Nature."
 audio: "assets/audio/what-is-a-good-fm.mp3"

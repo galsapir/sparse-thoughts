@@ -1,5 +1,6 @@
 ---
 layout: post
+redirect_from: /narrating-your-blog/
 title: narrating your blog with local AI
 description: "Open-source TTS crossed a quality threshold. Here's a tool that adds audio narration to Jekyll blogs using Kokoro-82M — runs locally on Apple Silicon, takes an evening to set up, costs nothing."
 audio: "assets/audio/narrating-your-blog.mp3"

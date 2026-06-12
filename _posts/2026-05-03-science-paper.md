@@ -1,5 +1,6 @@
 ---
 layout: post
+redirect_from: /science-paper/
 title: "on the comparator in clinical AI"
 description: "A 2024 finding in 2026, a buried result the paper doesn't engage with, and the wrong comparator: on Brodeur et al.'s Science paper."
 tags: [health, evaluation]

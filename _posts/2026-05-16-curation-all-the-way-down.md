@@ -1,5 +1,6 @@
 ---
 layout: post
+redirect_from: /curation-all-the-way-down/
 title: "curation all the way down: on clinical AI benchmarks"
 description: "the curation regression, the openness trade-off, and what a substrate worth evaluating against would actually need: on Medmarks."
 date: 2026-05-16
