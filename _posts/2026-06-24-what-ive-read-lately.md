@@ -4,7 +4,7 @@ redirect_from: /what-ive-read-lately/
 title: "what i've read lately"
 description: "a loose reading list around agents, memory, benchmarks, and the hard parts of making models useful outside language and code."
 date: 2026-06-24
-tags: [reading, agents, evaluation, data-activation]
+tags: [reading, agents, benchmarks, data-activation]
 audio: "assets/audio/what-ive-read-lately.mp3"
 ---
 
