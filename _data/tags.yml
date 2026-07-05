@@ -1,0 +1,36 @@
+# ABOUTME: canonical tag vocabulary for the blog; order here = display order of the /thoughts filter row.
+# ABOUTME: candidates is the ledger of tags-in-waiting; a candidate is minted at 3 substantive posts (see CLAUDE.md "Tagging").
+vocabulary:
+  - name: evaluation
+    description: "how to know whether a model, agent, or system did a good job: success criteria, comparators, measurement design"
+  - name: health
+    description: "AI and ML in medicine and biology: clinical AI, EHR and CGM data, medical benchmarks, foundation models for physiology"
+  - name: agents
+    description: "working with LLM and coding agents: delegation, harnesses, workflows, agent-facing context"
+  - name: tools
+    description: "small purpose-built tools: what i built, why, and what building it taught"
+  - name: claude-code
+    description: "building on and working inside Claude Code: skills, commands, MCP, CLAUDE.md"
+  - name: benchmarks
+    description: "benchmark design specifically: construction, curation, contamination, benchmark-as-reward"
+  - name: cognition
+    description: "what AI and media do to human thinking: attention, offloading, deskilling, tacit skill"
+  - name: memory
+    description: "persistent memory for AI systems: second brains, capture and recall, context maps"
+  - name: data-activation
+    description: "turning raw domain data into surfaces models can learn from or be scored against"
+  - name: reading
+    description: "reading roundups and link notes: books, essays, papers, and why they stuck"
+  - name: meta
+    description: "this blog about itself: purpose, infrastructure, site changes"
+
+candidates:
+  - name: paper-review
+    note: "close critical reading of one specific published paper"
+    posts: [2026-05-03-science-paper.md, 2026-06-14-what-did-they-actually-measure.md]
+  - name: workflow
+    note: "how i structure day-to-day work with AI, distinct from agents themselves; currently folded into agents"
+    posts: [2026-03-13-cite-tool.md, 2026-05-07-small-changes.md, 2026-05-21-long-horizon-tasks.md]
+  - name: context-engineering
+    note: "orientation artifacts, AGENTS.md layering, token budgets; PEEK lives here"
+    posts: [2026-06-12-maps-of-context.md]

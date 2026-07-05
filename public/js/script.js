@@ -41,25 +41,49 @@
     });
   }
 
-  // Tag filtering on thoughts page
+  // Tag filtering on thoughts page; filter state lives in the URL hash so tags are linkable
   var tagFilters = document.querySelectorAll('.tag-filter');
   if (tagFilters.length > 0) {
     var items = document.querySelectorAll('.thought-item');
+    var description = document.getElementById('tag-description');
+
+    var applyFilter = function(tag) {
+      var activeBtn = null;
+      tagFilters.forEach(function(b) {
+        b.classList.remove('active');
+        if (b.getAttribute('data-tag') === tag) {
+          activeBtn = b;
+        }
+      });
+      if (!activeBtn) {
+        tag = 'all';
+        activeBtn = tagFilters[0];
+      }
+      activeBtn.classList.add('active');
+
+      if (description) {
+        description.textContent = activeBtn.getAttribute('data-description') || '';
+      }
+
+      items.forEach(function(item) {
+        if (tag === 'all' || item.getAttribute('data-tags').split(' ').indexOf(tag) !== -1) {
+          item.classList.remove('filtered-out');
+        } else {
+          item.classList.add('filtered-out');
+        }
+      });
+      return tag;
+    };
+
     tagFilters.forEach(function(btn) {
       btn.addEventListener('click', function() {
-        var tag = btn.getAttribute('data-tag');
-
-        tagFilters.forEach(function(b) { b.classList.remove('active'); });
-        btn.classList.add('active');
-
-        items.forEach(function(item) {
-          if (tag === 'all' || item.getAttribute('data-tags').split(' ').indexOf(tag) !== -1) {
-            item.classList.remove('filtered-out');
-          } else {
-            item.classList.add('filtered-out');
-          }
-        });
+        var tag = applyFilter(btn.getAttribute('data-tag'));
+        history.replaceState(null, '', tag === 'all' ? location.pathname : '#' + tag);
       });
     });
+
+    if (location.hash.length > 1) {
+      applyFilter(decodeURIComponent(location.hash.slice(1)));
+    }
   }
 })(document);
