@@ -4,7 +4,7 @@ redirect_from: /what-did-they-actually-measure/
 title: "what did they actually measure?"
 description: "a nature medicine paper says general llms beat specialized clinical tools: a close read of what its main benchmark actually measured, and what it left out."
 date: 2026-06-14
-tags: [health, evaluation]
+tags: [evaluation, benchmarks, health]
 audio: "assets/audio/what-did-they-actually-measure.mp3"
 ---
 

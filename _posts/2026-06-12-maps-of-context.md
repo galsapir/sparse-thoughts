@@ -4,7 +4,7 @@ redirect_from: /maps-of-context/
 title: "maps of context"
 description: "running PEEK's context maps on top of my second brain: a few hundred stable tokens of orientation can shape how the next hundred thousand get spent."
 date: 2026-06-12
-tags: [agents, memory, second-brain, PEEK]
+tags: [memory, agents, evaluation]
 audio: "assets/audio/maps-of-context.mp3"
 ---
 

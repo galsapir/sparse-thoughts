@@ -4,7 +4,7 @@ redirect_from: /benchmarking-as-data-activation/
 title: "benchmarking is the new data activation"
 description: "benchmarks as a way to turn messy domain data into a measurable, optimizable substrate for models."
 date: 2026-07-03
-tags: [health, evaluation]
+tags: [benchmarks, evaluation, health, data-activation]
 audio: "assets/audio/benchmarking-as-data-activation.mp3"
 ---
 

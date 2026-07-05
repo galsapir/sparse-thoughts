@@ -3,7 +3,7 @@ layout: post
 redirect_from: /second-brain-week-two/
 title: "a second brain, week two"
 description: "week two with a memory MCP as second brain: the background dread is lighter, reviews are cheaper but shallower, and why i'm not ready to let the system auto-fix itself."
-tags: [tools, memory, second-brain]
+tags: [memory, agents]
 audio: "assets/audio/second-brain-week-two.mp3"
 ---
 
