@@ -7,6 +7,8 @@ vocabulary:
     description: "AI and ML in medicine and biology: clinical AI, EHR and CGM data, medical benchmarks, foundation models for physiology"
   - name: agents
     description: "working with LLM and coding agents: delegation, harnesses, workflows, agent-facing context"
+  - name: workflow
+    description: "how i structure day-to-day work with AI: habits, boundaries, and operating patterns"
   - name: tools
     description: "small purpose-built tools: what i built, why, and what building it taught"
   - name: claude-code
@@ -25,12 +27,12 @@ vocabulary:
     description: "this blog about itself: purpose, infrastructure, site changes"
 
 candidates:
+  - name: personal
+    note: "first-person reflections grounded in lived experience rather than research or tool output"
+    posts: [2026-08-19-no-agents-after-8pm.md]
   - name: paper-review
     note: "close critical reading of one specific published paper"
     posts: [2026-05-03-science-paper.md, 2026-06-14-what-did-they-actually-measure.md]
-  - name: workflow
-    note: "how i structure day-to-day work with AI, distinct from agents themselves; currently folded into agents"
-    posts: [2026-03-13-cite-tool.md, 2026-05-07-small-changes.md, 2026-05-21-long-horizon-tasks.md]
   - name: context-engineering
     note: "orientation artifacts, AGENTS.md layering, token budgets; PEEK lives here"
     posts: [2026-06-12-maps-of-context.md]
