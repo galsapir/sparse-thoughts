@@ -9,6 +9,10 @@ vocabulary:
     description: "working with LLM and coding agents: delegation, harnesses, workflows, agent-facing context"
   - name: workflow
     description: "how i structure day-to-day work with AI: habits, boundaries, and operating patterns"
+  - name: work
+    description: "the experience and practice of doing good work: judgment, quality, energy, and boundaries"
+  - name: personal
+    description: "first-person reflections grounded in lived experience rather than research or tool output"
   - name: tools
     description: "small purpose-built tools: what i built, why, and what building it taught"
   - name: claude-code
@@ -27,9 +31,6 @@ vocabulary:
     description: "this blog about itself: purpose, infrastructure, site changes"
 
 candidates:
-  - name: personal
-    note: "first-person reflections grounded in lived experience rather than research or tool output"
-    posts: [2026-08-19-no-agents-after-8pm.md]
   - name: paper-review
     note: "close critical reading of one specific published paper"
     posts: [2026-05-03-science-paper.md, 2026-06-14-what-did-they-actually-measure.md]

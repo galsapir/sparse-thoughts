@@ -4,7 +4,7 @@ redirect_from: /no-agents-after-8pm/
 title: "no agents after 8pm"
 description: "on agents making it easier to keep working after my judgment starts to fade, and a simple rule for stopping."
 date: 2026-08-19
-tags: [agents, cognition, workflow]
+tags: [personal, work, agents, workflow]
 audio: "assets/audio/no-agents-after-8pm.mp3"
 ---
 
