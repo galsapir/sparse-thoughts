@@ -7,7 +7,7 @@ permalink: /phenobench/
 tags: [benchmarks, data-activation, health]
 ---
 
-*this post accompanies the PhenoBench preprint (link once arXiv finishes moderation). also see the [public repo](https://github.com/galsapir/phenobench-benchmark) and [website and leaderboards](https://galsapir.github.io/phenobench-benchmark/).*
+*this post accompanies the [PhenoBench preprint](https://arxiv.org/abs/2609.06080). also see the [public repo](https://github.com/galsapir/phenobench-benchmark) and [website and leaderboards](https://galsapir.github.io/phenobench-benchmark/).*
 
 a while back i wrote about [data activation](https://sparsethought.com/2026/01/17/data_activation/): how we can use the data we collect and organize with great care to inform and improve AI systems. we have increasingly powerful models, and a lot of hard-won data that they still struggle to make much use of. finding useful ways to connect the two seems like an important thing to work on, especially in medicine.
 
