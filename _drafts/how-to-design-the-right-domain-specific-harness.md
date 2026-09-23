@@ -1,9 +1,11 @@
 ---
 layout: post
-title: "how to design the right domain-specific harness?"
+redirect_from: /how-to-design-the-right-domain-specific-harness/
+title: "how do you design the right domain-specific harness?"
 description: "what belongs in a research harness when the models keep improving, and how do we get the expertise into it?"
 date: 2026-09-23
 tags: [agents, health, data-activation]
+audio: "assets/audio/how-to-design-the-right-domain-specific-harness.mp3"
 ---
 
 domain-specific harnesses seem to be getting a lot of attention lately, deservedly, i think. with models improving at the current rate, the environment we give them is one of the more useful things we can optimize.
@@ -18,13 +20,13 @@ for example, suppose we want to know how glucose varies across sleep stages. joi
 
 anything that can be deterministic code should be code. trivial, but there is little reason to have the agent reconstruct that operation from instructions in a skill every time. subsequent analyses can call the tested implementation.
 
-the domain-specific part also needs to actually be specific. if i find myself explaining broad reasoning strategies, i think i'm probably doing something wrong. OpenAI's [guidance for reasoning models](https://developers.openai.com/api/docs/guides/reasoning-best-practices#how-to-prompt-reasoning-models-effectively) explicitly says that asking them to “think step by step” is unnecessary. its [GPT-5.5 guidance](https://developers.openai.com/api/docs/guides/latest-model?model=gpt-5.5) similarly recommends reducing prescribed steps unless the exact process matters.[^1] i want to piggyback on that progress. the model still needs to know how *our* recordings were collected and what we've learned about using them. instructions compensating for a model's general limitations should be reconsidered when the model changes.
+the domain-specific part also needs to actually be specific. if i find myself telling the model to “think carefully” rather than supplying knowledge about our data, i think i'm probably doing something wrong. OpenAI's [guidance for reasoning models](https://developers.openai.com/api/docs/guides/reasoning-best-practices#how-to-prompt-reasoning-models-effectively) explicitly says that asking them to “think step by step” is unnecessary. its [GPT-5.5 guidance](https://developers.openai.com/api/docs/guides/latest-model?model=gpt-5.5) similarly recommends reducing prescribed steps unless the exact process matters.[^1] i want to piggyback on that progress. the model still needs to know how *our* recordings were collected and what we've learned about using them. instructions compensating for a model's general limitations should be reconsidered when the model changes.
 
 so, as lean as possible (but not leaner). start with the pieces we have, and check whether they help on actual research tasks. try removing instructions too, while checking that the agent still uses the data correctly. both the process of building the harness and the research done with it should benefit from better models, which is another reason to keep the structure simple and the models replaceable.
 
 this is the shape we're working toward:
 
-![Figure 1: expert-guided construction turns cohort data, papers, code, and judgment into a reusable harness that a fresh research agent can use.](/assets/images/domain-specific-harness/figure1.png)
+[![Figure 1: expert-guided construction turns cohort data, papers, code, and judgment into a reusable harness that a fresh research agent can use.](/assets/images/domain-specific-harness/figure1.png)](/assets/images/domain-specific-harness/figure1.png)
 
 *Figure 1. constructing the harness and using it are separate processes. a fresh agent should be able to use what we've assembled without the builder's conversation.*
 
