@@ -1,9 +1,11 @@
 ---
 layout: post
+redirect_from: /gemini-4-model-card/
 title: "gemini 4 model card"
 description: "a few observations on Gemini 4, token efficiency, and its model card."
 date: 2026-11-15
 tags: [evaluation, benchmarks]
+audio: "assets/audio/gemini-4-model-card.mp3"
 ---
 
 Gemini 4 Carbon [became broadly available this week](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/), and i like to skim the model cards and announcements to see what they can reveal.
