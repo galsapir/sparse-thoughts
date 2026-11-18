@@ -1,4 +1,6 @@
 ---
+# ABOUTME: Renders an individual Sparse Thoughts post and its end matter.
+# ABOUTME: Places post copy actions before the signup and related posts.
 layout: default
 ---
 
@@ -10,6 +12,7 @@ layout: default
   {% endif %}
   {% include audio-player.html %}
   {{ content }}
+  {% include post-actions.html %}
 </div>
 
 <div class="subscribe-section">

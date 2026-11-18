@@ -1,3 +1,5 @@
+/* ABOUTME: Styles the Sparse Thoughts theme, reading layout, and post controls. */
+/* ABOUTME: Uses shared color tokens for the light and dark themes. */
 /*
  *  ___
  * /\_ \
@@ -288,6 +290,44 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footnotes ol {
   padding-left: 1.25rem;
+}
+
+.post-actions {
+  margin-top: 1.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.85rem;
+  color: var(--muted-color);
+}
+.post-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 1rem;
+}
+.post-action-row button {
+  min-height: 2rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+.post-action-row button:hover,
+.post-action-row button:focus-visible {
+  color: var(--link-color);
+}
+.post-copy-text {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  background: var(--bg-color);
+  color: var(--text-color);
+  font: inherit;
 }
 
 /* Subscribe section */

@@ -1,0 +1,34 @@
+{% comment %}
+ABOUTME: Renders clipboard controls and citation metadata for a post.
+ABOUTME: Provides the Jekyll-processed Markdown body with front matter removed.
+{% endcomment %}
+{%- assign source_name = page.path | split: '/' | last -%}
+{%- capture post_source -%}{% include_relative {{ source_name }} %}{%- endcapture -%}
+{%- capture front_matter_end %}
+---
+{% endcapture -%}
+{%- comment -%}Jekyll may reuse the parsed body for a post that contains Liquid.{%- endcomment -%}
+{%- assign source_start = post_source | slice: 0, 3 -%}
+{%- if source_start == '---' -%}
+  {%- assign front_matter = post_source | split: front_matter_end | first | append: front_matter_end -%}
+  {%- assign post_source = post_source | remove_first: front_matter -%}
+{%- endif -%}
+{%- assign author_surname = site.author.name | split: ' ' | last | slugify -%}
+{%- assign publication_year = page.date | date: '%Y' -%}
+<div class="post-actions" hidden
+     data-title="{{ page.title | escape }}"
+     data-author="{{ site.author.name | escape }}"
+     data-site-name="{{ site.title | escape }}"
+     data-date="{{ page.date | date: '%Y-%m-%d' }}"
+     data-date-label="{{ page.date | date: '%B %-d, %Y' }}"
+     data-url="{{ page.url | absolute_url | escape }}"
+     data-cite-key="{{ author_surname }}{{ publication_year }}{{ page.slug | slugify }}">
+  <div class="post-action-row" role="group" aria-label="Copy post">
+    <button type="button" data-copy="citation">Copy citation</button>
+    <button type="button" data-copy="bibtex">Copy BibTeX</button>
+    <button type="button" data-copy="markdown">Copy as Markdown</button>
+    <span role="status"></span>
+  </div>
+  <textarea class="post-copy-text" aria-label="Text to copy" rows="3" readonly hidden></textarea>
+  <template data-post-markdown>{{ post_source | strip | escape }}</template>
+</div>

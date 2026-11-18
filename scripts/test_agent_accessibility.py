@@ -1,6 +1,8 @@
 # ABOUTME: Checks generated site artifacts that make Sparse Thoughts easy for agents to crawl.
 # ABOUTME: Builds the real Jekyll site and verifies redirects, indexes, and excluded files.
+from html import unescape
 from pathlib import Path
+import re
 import subprocess
 
 
@@ -36,16 +38,15 @@ def front_matter(path: Path) -> dict[str, str]:
 
 
 def post_url(path: Path) -> str:
+    if permalink := front_matter(path).get("permalink"):
+        return f"{SITE_URL}{permalink}"
+
     parts = path.stem.split("-", 3)
     if len(parts) != 4:
         raise AssertionError(f"{path} does not use YYYY-MM-DD-slug.md naming")
 
     year, month, day, slug = parts
     return f"{SITE_URL}/{year}/{month}/{day}/{slug}/"
-
-
-def post_slug(path: Path) -> str:
-    return path.stem.split("-", 3)[3]
 
 
 def tracked_posts() -> list[Path]:
@@ -89,8 +90,13 @@ def test_generated_llms_txt_lists_posts() -> None:
 
 def test_posts_have_slug_redirects() -> None:
     for path in sorted(tracked_posts()):
+        metadata = front_matter(path)
+        if "permalink" in metadata and "redirect_from" not in metadata:
+            continue
+
         url = post_url(path)
-        redirect_page = SITE_DIR / post_slug(path) / "index.html"
+        redirect_path = metadata["redirect_from"]
+        redirect_page = SITE_DIR / redirect_path.strip("/") / "index.html"
         if not redirect_page.exists():
             raise AssertionError(f"{redirect_page} does not exist")
         assert_contains(redirect_page.read_text(), url, str(redirect_page))
@@ -110,12 +116,34 @@ def test_internal_docs_are_not_published() -> None:
     assert_not_contains(sitemap_text, "/README/", "sitemap.xml")
 
 
+def test_post_copy_actions() -> None:
+    for path in sorted(tracked_posts()):
+        url = post_url(path)
+        post_page = SITE_DIR / url.removeprefix(f"{SITE_URL}/") / "index.html"
+        html = post_page.read_text()
+
+        actions = html.find('class="post-actions"')
+        signup = html.find('class="subscribe-section"')
+        if not 0 <= actions < signup:
+            raise AssertionError(f"{url} should have copy actions before the signup")
+
+        for label in ("Copy citation", "Copy BibTeX", "Copy as Markdown"):
+            assert_contains(html[actions:signup], f">{label}</button>", url)
+
+        source = re.search(r"<template data-post-markdown>(.*?)</template>", html, re.S)
+        body = path.read_text().split("\n---\n", 1)[1].strip()
+        body = body.replace("{{ site.baseurl }}", "")
+        if source is None or unescape(source[1]) != body:
+            raise AssertionError(f"{url} should provide the full Markdown body")
+
+
 def main() -> None:
     build_site()
     test_buttondown_is_ignored()
     test_generated_llms_txt_lists_posts()
     test_posts_have_slug_redirects()
     test_internal_docs_are_not_published()
+    test_post_copy_actions()
 
 
 if __name__ == "__main__":
